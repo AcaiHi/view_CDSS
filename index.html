@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檔案總管</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%; /* 調整容器寬度讓內容更集中 */
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .file-explorer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 讓每行只顯示3個項目 */
+            gap: 30px; /* 增加項目間的距離 */
+            justify-items: center; /* 讓項目水平置中 */
+        }
+        .file-item {
+            background-color: #fff;
+            width: 200px; /* 調整每個項目的寬度 */
+            padding: 20px; /* 增加內部的間距 */
+            border-radius: 10px; /* 增加圓角 */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增強陰影效果 */
+            transition: transform 0.2s;
+        }
+        .file-item:hover {
+            transform: scale(1.1); /* 調整放大效果 */
+        }
+        .file-icon {
+            font-size: 60px; /* 調整圖標大小 */
+        }
+        .file-name {
+            margin-top: 15px;
+            font-size: 18px; /* 調整文字大小 */
+            word-wrap: break-word;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>檔案總管</h1>
+        <div class="file-explorer">
+            <!-- Example of file items -->
+            <div class="file-item">
+                <a href="[1018]CDSS_DATA_REPORT.html" target="_blank">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">[1018]CDSS_DATA_REPORT</div>
+                </a>
+            </div>
+            <div class="file-item">
+                <a href="no_smote_imputation/no_smote_imputation.html" target="_blank">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">沒有SMOTE_隨機抽取1500位測試案例(未訓練的測試集)</div>
+                </a>
+            </div>
+            <div class="file-item">
+                <a href="smote_imputation/smote_imputation.html" target="_blank">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">SMOTE_隨機抽取1500位測試案例(未訓練的測試集)</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
